@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"> 
+	<session-config>
+		<session-timeout>100</session-timeout>
+	</session-config>
+	<filter>
+		<filter-name>dofilter</filter-name>
+		<filter-class>com.publics.EncodingFilter</filter-class>	 
+	</filter>
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>  	
+		<!-- 系统设置 -->
+		<init-param>
+			<param-name>config/system</param-name>
+			<param-value>/WEB-INF/config/system.xml</param-value>
+		</init-param>		  
+		<!-- 人事系统 -->
+		<init-param>
+			<param-name>config/person</param-name>
+			<param-value>/WEB-INF/config/person.xml</param-value>
+		</init-param>		
+		<!-- OA系统 -->		 
+		<init-param>
+		<param-name>config/oa</param-name>
+			<param-value>/WEB-INF/config/oa.xml</param-value>
+		</init-param>		
+		<!-- 财务系统 -->		 
+		<init-param>
+		<param-name>config/financial</param-name>
+			<param-value>/WEB-INF/config/financial.xml</param-value>
+		</init-param>	  
+		<!-- 报表系统 -->		 
+		<init-param>
+		<param-name>config/report</param-name>
+			<param-value>/WEB-INF/config/report.xml</param-value>
+		</init-param>
+		<!-- 计划书系统 -->		 
+		<init-param>
+		<param-name>config/plan</param-name>
+			<param-value>/WEB-INF/config/plan.xml</param-value>
+		</init-param>	  
+		<!-- 寿险系统 -->		 
+		<init-param>
+		<param-name>config/life</param-name>
+			<param-value>/WEB-INF/config/life.xml</param-value>
+		</init-param>
+		<!-- 产险系统 -->		 
+		<init-param>
+		<param-name>config/wealth</param-name>
+			<param-value>/WEB-INF/config/wealth.xml</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>0</param-value>
+		</init-param>		
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>dwr</servlet-name>
+		<servlet-class>
+			org.directwebremoting.servlet.DwrServlet
+		</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	<filter-mapping>	
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/tool/common/*</url-pattern>
+	</filter-mapping> 
+	<filter-mapping>
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/system/*</url-pattern>
+	</filter-mapping>	 
+	<filter-mapping>
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/person/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/oa/*</url-pattern>
+	</filter-mapping>	
+	<filter-mapping>
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/financial/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/report/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/plan/*</url-pattern>
+	</filter-mapping>	
+	<filter-mapping>
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/life/*</url-pattern>
+	</filter-mapping>	
+	<filter-mapping>
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/wealth/*</url-pattern>
+	</filter-mapping>	
+	<filter-mapping>
+		<filter-name>dofilter</filter-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</filter-mapping>	
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>	
+	<!-- 图形报表配置 -->
+	<servlet>
+		<servlet-name>DisplayChart</servlet-name>
+		<servlet-class>org.jfree.chart.servlet.DisplayChart</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisplayChart</servlet-name>
+		<url-pattern>/servlet/DisplayChart</url-pattern>
+	</servlet-mapping>	 
+</web-app>

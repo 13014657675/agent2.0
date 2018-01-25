@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="agent2.0"
+  id="myeclipse.1387071775421"
+  context-root="/agent2.0"
+  j2ee-spec="1.4"
+  archive="agent2.0.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

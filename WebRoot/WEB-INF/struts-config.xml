@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources /> 
+  <form-beans >  
+    <form-bean name="loginForm" type="com.main.form.LoginForm" /> 
+  </form-beans>
+  <global-exceptions >
+  <exception key="sql.error" type="java.lang.Exception"  scope="request" handler="com.publics.ExceptionHander"   path="/error.jsp" />
+  </global-exceptions>
+  <global-forwards >  
+  	 <forward name="login" path="/login.jsp" />
+	 <forward name="index" path="/index.jsp" />
+  </global-forwards>	
+  <action-mappings >
+  <action path="/toModule" type="com.publics.SwitchAction2"/>  
+  <action attribute="loginForm"  input="/login.jsp"    name="loginForm" path="/login"     scope="request" type="com.main.action.LoginAction" >    </action>        
+  <action  path="/loginout"       scope="request" type="com.main.action.LoginoutAction" >    </action>            
+  </action-mappings>  
+  <message-resources parameter="com.config.main" />  
+  <plug-in  className="net.sf.navigator.menu.MenuPlugIn">
+	<set-property property="menuConfig"
+		value="/WEB-INF/menu-config.xml" />
+  </plug-in> 
+</struts-config>
+

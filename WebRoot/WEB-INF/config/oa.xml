@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+ 	<form-beans >    	  	    
+        <form-bean name="fileForm" type="com.oa.form.FileForm" /> 
+        <form-bean name="toolForm" type="com.oa.form.ToolForm" /> 
+        <form-bean name="signedForm" type="com.oa.form.SignedForm" /> 
+        <form-bean name="shopForm" type="com.oa.form.ShopForm" /> 
+  	</form-beans>
+	<global-exceptions >
+  	<exception key="sql.error" type="java.sql.SQLException"  scope="request" handler="com.publics.ExceptionHander"   path="/error.jsp" />
+  	</global-exceptions>
+  	<global-forwards >
+   	<forward name="success" path="/success.jsp" />
+    <forward name="index" 	path="/index.jsp" /> 
+  	</global-forwards>
+  	<action-mappings >     	
+    <action  name="fileForm"  path="/file"  parameter="jobname"   type="com.oa.action.FileAction" />  
+    <action  name="toolForm"  path="/tool"  parameter="jobname"   type="com.oa.action.ToolAction" />     
+    <action  name="signedForm"  path="/signed"  parameter="jobname"   type="com.oa.action.SignedAction" />    
+    <action  name="shopForm"  path="/shop"  parameter="jobname"   type="com.oa.action.ShopAction" />
+    
+  	</action-mappings>   
+</struts-config>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+ 	<form-beans >    	  	     
+ 	<form-bean name="staffForm" 	type="com.person.form.StaffForm" />   	 
+ 	<form-bean name="payForm" 		type="com.person.form.PayForm" />   
+ 	<form-bean name="checkForm" 	type="com.person.form.CheckForm" />   
+ 	
+  	</form-beans>
+	<global-exceptions >
+  	<exception key="sql.error" type="java.sql.SQLException"  scope="request" handler="com.publics.ExceptionHander"   path="/error.jsp" />
+  	</global-exceptions>
+  	<global-forwards >
+   	<forward name="success" path="/success.jsp" />
+    <forward name="index" 	path="/index.jsp" /> 
+  	</global-forwards>
+  	<action-mappings >     	
+    <action  name="staffForm"    path="/staff"    parameter="jobname"   type="com.person.action.StaffAction" />  
+    <action  name="payForm"      path="/pay"      parameter="jobname"   type="com.person.action.PayAction" />  
+    <action  name="checkForm"  	 path="/check"    parameter="jobname"   type="com.person.action.CheckAction" />  
+   
+    
+  	</action-mappings>   
+</struts-config>
+

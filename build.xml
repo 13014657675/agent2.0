@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project basedir="." default="build" name="agent2">     
+    <property name="WebRoot" value="${basedir}/WebRoot"/>
+    <property name="src" value="${basedir}/src"/>    
+    <property environment="env"/>
+    <property name="tomcate.home" value="D:\\hunan\\apache-tomcat-5.5.26"/>        
+    
+    <path id="classpath">
+    	<fileset dir="${tomcate.home}/common/lib" includes= "*.jar " />        
+    	<fileset dir= "WebRoot/WEB-INF/lib"   	includes= "*.jar "/>         
+        <pathelement location="WebRoot/WEB-INF/classes"/>                        
+    </path>  
+        
+    <target  name="clean">
+        <delete dir="WebRoot/WEB-INF/classes"/>
+    </target>             
+     
+    <target depends="clean"  name="init">   
+        <mkdir dir="WebRoot/WEB-INF/classes"/>        
+        <copy todir="WebRoot/WEB-INF/classes">
+            <fileset dir="src" excludes="**/*.launch, **/*.java"/>
+        </copy>
+    </target>
+    
+    <target depends="init" name="build">
+        <echo message="${src}"/>
+        <echo message="${WebRoot}/WEB-INF/classes"/>
+        <javac  debuglevel="${debuglevel}" destdir="${WebRoot}/WEB-INF/classes" srcdir="${src}" debug="true" >            
+        	 <classpath refid="classpath"/>
+        </javac>
+    </target>      
+          
+</project>

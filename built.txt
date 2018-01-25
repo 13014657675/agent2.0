@@ -1,0 +1,19 @@
+Buildfile: D:\cvs\check\agent2.0\build.xml
+
+clean:
+
+init:
+    [mkdir] Created dir: D:\cvs\check\agent2.0\WebRoot\WEB-INF\classes
+     [copy] Copying 2 files to D:\cvs\check\agent2.0\WebRoot\WEB-INF\classes
+     [copy] Copied 30 empty directories to 28 empty directories under D:\cvs\check\agent2.0\WebRoot\WEB-INF\classes
+
+build:
+     [echo] D:\cvs\check\agent2.0/src
+     [echo] D:\cvs\check\agent2.0/WebRoot/WEB-INF/classes
+    [javac] D:\cvs\check\agent2.0\build.xml:29: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 83 source files to D:\cvs\check\agent2.0\WebRoot\WEB-INF\classes
+    [javac] 注意：D:\cvs\check\agent2.0\src\com\test\TestProcessor.java 使用了未经检查或不安全的操作。
+    [javac] 注意：要了解详细信息，请使用 -Xlint:unchecked 重新编译。
+
+BUILD SUCCESSFUL
+Total time: 4 seconds

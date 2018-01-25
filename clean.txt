@@ -1,0 +1,7 @@
+Buildfile: D:\cvs\check\agent2.0\build.xml
+
+clean:
+   [delete] Deleting directory D:\cvs\check\agent2.0\WebRoot\WEB-INF\classes
+
+BUILD SUCCESSFUL
+Total time: 0 seconds

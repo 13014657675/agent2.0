@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+	功能：菜单定义  
+	说明：
+	A	系统设置   
+	B 	人事系统
+	C 	OA系统 
+	 
+--> 
+<MenuConfig>
+<Displayers>
+	<Displayer	name="DropDown"		type="com.publics.DropDownMenu" />	
+	<Displayer	name="postqxMenuForm"		type="com.publics.PostqxMenuDisplayer" />
+	<Displayer	name="staffqxMenuForm"		type="com.publics.StaffqxMenuDisplayer" />
+	<Displayer	name="MenuForm2"	type="com.publics.PermissionsFormMenuDisplayer2" />
+</Displayers> 
+<Menus>
+<!-- 系统设置 --> 
+<Menu name="A1" title="公司管理" width="50">	 
+	<Item name="A11" title="机构类型定义"> 
+		<Item name="A111" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/orgtype/add.jsp" />	
+		<Item name="A112" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/orgtype/delete.jsp" /> 	 	
+		<Item name="A113" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/orgtype/update.jsp" />  
+		<Item name="A114" title="层级设置"	 	image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/orgtype/order.jsp" /> 
+		<Item name="A115" title="前缀设置"	 	image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/orgtype/mark.jsp" /> 
+	</Item>  
+	<Item name="A12" title="机构等级定义"> 
+		<Item name="A121" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/orgclass/add.jsp" />	
+		<Item name="A122" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/orgclass/delete.jsp" /> 	 	
+		<Item name="A123" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/orgclass/update.jsp" />  
+	</Item>
+	<Item name="A13" title="机构管理"> 
+		<Item name="A131" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/organization/add.jsp" />	
+		<Item name="A132" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/organization/delete.jsp" /> 	 	
+		<Item name="A133" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/organization/update.jsp" />  
+		<Item name="A134" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/organization/query.jsp" />		 
+		<Item name="A135" title="等级设置"	 	image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/organization/class.jsp" />	
+		<Item name="A136" title="开关设置"	 	image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/organization/switch.jsp" />
+	</Item>	
+	<Item name="A14" title="部门管理"> 
+		<Item name="A141" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/dept/add.jsp" />	
+		<Item name="A142" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/dept/delete.jsp" /> 	 	
+		<Item name="A143" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/dept/update.jsp" />  
+	</Item>		
+	<Item name="A15" title="职位和岗位设置"> 
+		<Item name="A151" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/post/add.jsp" />	
+		<Item name="A152" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/post/delete.jsp" />	
+		<Item name="A153" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/post/update.jsp" />	 
+		<Item name="A154" title="部门长设置" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/post/sir.jsp" />	 
+		<Item name="A155" title="权限设置"	 	image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/organization/post/menu.jsp" />	
+	</Item>			 				 
+</Menu>
+<Menu name="A2" title="供应商管理" width="50">	 
+	<Item name="A21" title="保险公司"> 
+		<Item name="A211" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/company/add.jsp" />	
+		<Item name="A212" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/company/delete.jsp" /> 	 	
+		<Item name="A213" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/company/update.jsp" />   
+		<Item name="A214" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/company/query.jsp" />   
+	</Item>  
+	<Item name="A22" title="职业代码"> 
+		<Item name="A221" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/occupation/add.jsp" />	
+		<Item name="A222" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/occupation/delete.jsp" /> 	 	
+		<Item name="A223" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/occupation/update.jsp" />  
+		<Item name="A224" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/occupation/query.jsp" />  
+	</Item>
+	<Item name="A23" title="投保单结构"> 
+		<Item name="A231" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/tbds/add.jsp" />	
+		<Item name="A232" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/tbds/delete.jsp" /> 	 	
+		<Item name="A233" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/tbds/update.jsp" />  
+	</Item>		
+	<Item name="A24" title="系数类型定义"> 
+		<Item name="A241" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/convertT/add.jsp" />	
+		<Item name="A242" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/convertT/delete.jsp" /> 	 	
+		<Item name="A243" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/convertT/update.jsp" />  
+	</Item>		
+	<Item name="A25" title="系数设置"> 
+		<Item name="A251" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/convert/add.jsp" />	
+		<Item name="A252" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/convert/delete.jsp" /> 	 	
+		<Item name="A253" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/company/convert/update.jsp" />  
+	</Item>		 
+</Menu> 
+<Menu name="A3" title="产品定义" width="50">	 
+	<Item name="A31" title="产品分类"> 
+		<Item name="A311" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptclass/add.jsp" />	
+		<Item name="A312" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptclass/delete.jsp" /> 	 	
+		<Item name="A313" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptclass/update.jsp" />  
+	</Item>  
+	<Item name="A32" title="产品类型"> 
+		<Item name="A321" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/pttype/add.jsp" />	
+		<Item name="A322" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/pttype/delete.jsp" /> 	 	
+		<Item name="A323" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/pttype/update.jsp" />  
+	</Item>
+	<Item name="A33" title="险种定义"> 
+		<Item name="A331" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/product/add.jsp" />	
+		<Item name="A332" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/product/delete.jsp" /> 	 	
+		<Item name="A333" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/product/update.jsp" />
+		<Item name="A334" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/product/query.jsp" />   
+		<Item name="A335" title="销售设置" 		image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/product/sale.jsp" />  
+	</Item>  	
+	<Item name="A34" title="险种组件定义"> 
+		<Item name="A341" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/pcomponent/add.jsp" />	
+		<Item name="A342" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/pcomponent/delete.jsp" /> 	 
+		<Item name="A344" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/pcomponent/query.jsp" />    
+	</Item>  	
+	<Item name="A35" title="险种费率定义"> 
+		<Item name="A351" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptrate/add.jsp" />	
+		<Item name="A352" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptrate/delete.jsp" /> 	 	
+		<Item name="A353" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptrate/update.jsp" />   
+		<Item name="A354" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptrate/query.jsp" />
+	</Item>
+	<Item name="A36" title="保险责任定义"> 
+		<Item name="A361" title="描述添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/liability/add.jsp" />	
+		<Item name="A362" title="描述删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/liability/delete.jsp" /> 	  
+		<Item name="A365" title="相关名词定义" 	image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/liability/cadd.jsp" />  		
+		<Item name="A366" title="结构设置" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/liability/sadd.jsp" />  
+	</Item> 		
+	<Item name="A37" title="折标系数修正"> 
+		<Item name="A371" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptconvert/add.jsp" />	
+		<Item name="A372" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptconvert/delete.jsp" /> 	 	
+		<Item name="A373" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/product/ptconvert/update.jsp" />  
+	</Item>	 		 
+</Menu> 
+<Menu name="A0" title="自定义处理器" width="50">	 
+	<Item name="A01" title="参数定义"> 
+		<Item name="A011" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/param/add.jsp" />	
+		<Item name="A012" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/param/delete.jsp" /> 	 	
+		<Item name="A013" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/param/update.jsp" />  
+	</Item>  
+	<Item name="A02" title="处理器类型定义"> 
+		<Item name="A021" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/projectclass/add.jsp" />	
+		<Item name="A022" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/projectclass/delete.jsp" /> 	 
+		<Item name="A023" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/projectclass/update.jsp" />
+		<Item name="A024" title="设置最终处理器" 	image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/projectclass/set.jsp" /> 				 
+	</Item> 	
+	<Item name="A03" title="基础处理器定义"> 
+		<Item name="A031" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/function/add.jsp" />	
+		<Item name="A032" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/function/delete.jsp" /> 	 
+		<Item name="A033" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/function/query.jsp" /> 				 
+	</Item>   	 
+	<Item name="A04" title="普通处理器定义"> 
+		<Item name="A041" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/combination/add.jsp" />	
+		<Item name="A042" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/combination/delete.jsp" /> 	
+		<Item name="A043" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/system@page=/project/combination/query.jsp" /> 		 
+	</Item>   	
+</Menu> 
+<!-- 人事系统 -->  
+<Menu name="B1" title="人事管理" width="50"> 
+	<Item name="B11" title="员工入司"> 
+		<Item name="B111" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/entry/add.jsp" />		 
+		<!-- 
+		<Item name="B112" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/entry/delete.jsp" /> 	
+		 -->
+		<Item name="B114" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/entry/query.jsp" /> 
+	</Item> 
+	<Item name="B12" title="基本资料修改">		
+		<Item name="B121" title="修改"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/staffset/update.jsp" />	 
+	</Item> 	
+	<Item name="B13" title="职位或岗位调整">		
+		<Item name="B131" title="调整"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/postset/update.jsp" />	 
+	</Item> 	
+	<Item name="B14" title="薪酬等级调整">		
+		<Item name="B141" title="调整"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/payset/update.jsp" />	 
+	</Item> 	
+	<Item name="B15" title="转正操作">		
+		<Item name="B151" title="转正"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/stateset/update.jsp" />	 
+	</Item> 	
+	<Item name="B16" title="机构负责人设置">		
+		<Item name="B161" title="设置"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/head/set.jsp" />	 
+	</Item>	
+	<Item name="B17" title="权限调整">		
+		<Item name="B171" title="调整"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/menu/set.jsp" />	 
+	</Item> 	
+	<Item name="B18" title="密码设置">		
+		<Item name="B181" title="设置"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/password/recovery.jsp" />	 
+	</Item>   
+	<Item name="B19" title="离司操作">		
+		<Item name="B191" title="离司"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/staff/quit/quit.jsp" />	 
+	</Item> 
+</Menu>  
+<Menu name="B2" title="薪酬管理" width="50">	
+	<Item name="B21" title="薪酬类别定义">
+		<Item name="B211" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/type/add.jsp" />		 
+		<Item name="B212" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/type/delete.jsp" />
+		<Item name="B213" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/type/update.jsp" />  	 
+	</Item>  
+	<Item name="B22" title="薪酬等级定义">
+		<Item name="B221" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/class/add.jsp" />		 
+		<Item name="B222" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/class/delete.jsp" />
+		<Item name="B223" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/class/update.jsp" />   
+	</Item>		
+	<Item name="B23" title="薪酬项目定义">		
+		<Item name="B231" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/item/add.jsp" />		 
+		<Item name="B232" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/item/delete.jsp" />
+		<Item name="B233" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/item/update.jsp" />  
+	</Item>  	
+	<Item name="B24" title="薪酬标准定义">
+		<Item name="B241" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/standard/add.jsp" />		 
+		<Item name="B242" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/standard/delete.jsp" />
+		<Item name="B243" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/standard/update.jsp" />   
+		<Item name="B244" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/standard/query.jsp" />  
+	</Item>			
+	<Item name="B25" title="薪酬社保定义">		
+		<Item name="B251" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/social/add.jsp" />		 
+		<Item name="B252" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/social/delete.jsp" />
+		<Item name="B253" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/social/update.jsp" />  		
+		<Item name="B254" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/social/query.jsp" />  	
+	</Item>  
+	<Item name="B26" title="薪酬系数定义">		
+		<Item name="B261" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/coefficient/add.jsp" />		 
+		<Item name="B262" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/coefficient/delete.jsp" /> 		
+	</Item>  		
+	<Item name="B27" title="薪酬系数值设置">		
+		<Item name="B271" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/coefficientset/add.jsp" />		 
+		<Item name="B272" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/coefficientset/delete.jsp" />
+		<Item name="B273" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/coefficientset/update.jsp" />  	
+		<Item name="B274" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/coefficientset/query.jsp" />  	
+	</Item> 	
+	<Item name="B28" title="薪酬结算">				 
+		<Item name="B281" title="薪酬计算"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/payment/add.jsp" />	 
+		<Item name="B282" title="薪酬查询"		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/pay/payment/query.jsp" />	 
+	</Item> 	
+</Menu>
+<Menu name="B3" title="考勤管理" width="50">	
+	<Item name="B31" title="考勤项目定义">
+		<Item name="B311" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/ontype/add.jsp" />		 
+		<Item name="B312" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/ontype/delete.jsp" />
+		<Item name="B313" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/ontype/update.jsp" /> 	
+		<Item name="B314" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/ontype/query.jsp" /> 		 		 	
+	</Item>  
+	<Item name="B32" title="考勤项目设置">
+		<Item name="B321" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/ontype2/add.jsp" />		 
+		<Item name="B322" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/ontype2/delete.jsp" />
+		<Item name="B323" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/ontype2/update.jsp" />   
+	</Item>	
+	<Item name="B33" title="考勤工号关联">
+		<Item name="B331" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onrelate/add.jsp" />		 
+		<Item name="B332" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onrelate/delete.jsp" />
+		<Item name="B333" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onrelate/update.jsp" />   
+	</Item>		
+	<Item name="B34" title="考勤记录录入">
+		<Item name="B341" title="导入"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onduty/import.jsp" />	
+		<Item name="B342" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onduty/add.jsp" />		 
+		<Item name="B343" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onduty/delete.jsp" />
+		<Item name="B344" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onduty/update.jsp" /> 
+		<Item name="B345" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onduty/query.jsp" /> 
+	</Item>  		
+	<Item name="B35" title="考勤汇总">
+		<Item name="B351" title="生成"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onsummary/add.jsp" />
+		<Item name="B351" title="删除"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onsummary/delete.jsp" />
+		<Item name="B352" title="查询"			image="images/child.gif"
+		location="toModule.do?prefix=/person@page=/check/onsummary/query.jsp" />	 	 		
+	</Item>  	 
+</Menu>
+<!-- OA系统 -->  
+<Menu name="C1" title="管理工具" width="50">	 
+	<Item name="C11" title="工具目录"> 
+		<Item name="C111" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/tool/catalog/add.jsp" />		 
+		<Item name="C112" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/tool/catalog/delete.jsp" />
+		<Item name="C113" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/tool/catalog/update.jsp" /> 	
+	</Item> 
+	<Item name="C12" title="工具上挂">		
+		<Item name="C121" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/tool/file/add.jsp" />		 
+		<Item name="C122" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/tool/file/delete.jsp" />
+		<Item name="C123" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/tool/file/query.jsp" /> 	 
+		<Item name="C124" title="设置" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/tool/file/setfile.jsp" /> 	 
+	</Item> 			 
+</Menu>
+<Menu name="C2" title="文件管理" width="50">	 
+	<Item name="C21" title="角色定义"> 
+		<Item name="C211" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/role/add.jsp" />		 
+		<Item name="C212" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/role/delete.jsp" />	
+	</Item> 
+	<Item name="C22" title="文件目录">		
+		<Item name="C221" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/catalog/add.jsp" />		 
+		<Item name="C222" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/catalog/delete.jsp" />
+		<Item name="C223" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/catalog/update.jsp" /> 	 
+	</Item> 	
+	<Item name="C23" title="文件流程">		
+		<Item name="C231" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/process/add.jsp" />		 
+		<Item name="C232" title="签批"	 		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/process/return.jsp" />
+		<Item name="C233" title="查询"	 		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/process/query.jsp" />
+	</Item> 
+	<Item name="C24" title="文件查阅">
+		<Item name="C241" title="查阅"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/file/read.jsp" />		 		 
+	</Item> 
+	<Item name="C25" title="文件状态">
+		<Item name="C251" title="设置"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/file/state/setfile.jsp" />		  
+	</Item> 			 
+</Menu> 
+<Menu name="C3" title="签报管理" width="50">	 
+	<Item name="C31" title="角色定义"> 
+		<Item name="C311" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/signed/role/add.jsp" />		 
+		<Item name="C312" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/signed/role/delete.jsp" />  
+	</Item> 	 
+	<Item name="C32" title="预授权设置">		
+		<Item name="C321" title="设置"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/signed/grant/add.jsp" />			 
+	</Item>		
+	<Item name="C33" title="签报流程">		
+		<Item name="C331" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/signed/process/add.jsp" />		 
+		<Item name="C332" title="签批"	 		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/signed/process/return.jsp" /> 	 
+		<Item name="C333" title="查询"	 		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/signed/process/query.jsp" /> 	
+	</Item> 	 		 
+</Menu> 
+<Menu name="C4" title="库房管理" width="50">	 		
+	<Item name="C41" title="分类定义">
+		<Item name="C411" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/goodstype/add.jsp" />			
+		<Item name="C412" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/goodstype/delete.jsp" />
+		<Item name="C413" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/goodstype/update.jsp" /> 	  
+	</Item> 	  
+	<Item name="C42" title="物品定义">
+		<Item name="C421" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/goods/add.jsp" />			
+		<Item name="C422" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/goods/delete.jsp" />
+		<Item name="C423" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/goods/update.jsp" /> 	 
+		<Item name="C424" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/goods/query.jsp" /> 	   	 
+	</Item> 	 
+	<Item name="C43" title="入库">
+		<Item name="C431" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/rk/add.jsp" />	
+		<Item name="C432" title="删除"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/rk/delete.jsp"/>		  
+		<Item name="C433" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/rk/query.jsp"/>  	 
+	</Item> 
+	<Item name="C44" title="定价">
+		<Item name="C441" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/dj/add.jsp" />
+		<Item name="C442" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/dj/update.jsp"/>  	   
+		<Item name="C443" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/dj/query.jsp"/>  	  
+	</Item>  
+	<Item name="C45" title="出库">
+		<Item name="C451" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/ck/add.jsp" />	   
+		<Item name="C452" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/ck/query.jsp"/>  	 
+	</Item>  
+	<Item name="C46" title="回库">
+		<Item name="C461" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/hk/add.jsp" />	 	  
+		<Item name="C462" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/hk/query.jsp"/>   
+	</Item>   
+	<Item name="C47" title="报废">
+		<Item name="C471" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/bf/add.jsp" />	 	  
+		<Item name="C472" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/bf/query.jsp"/>   
+	</Item> 	
+	<Item name="C48" title="相关查询">
+		<Item name="C481" title="库房查询"		image="images/child.gif"
+		location="toModule.do?prefix=/oa@page=/shop/record/query/query.jsp"/>		 
+	</Item> 	  
+</Menu>   
+<Menu name="D1" title="有价单证"	width="50">	
+	<Item name="D11" title="未定义"> 
+		<Item name="D111" title="未定义"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/srate/add.jsp" />	 
+	</Item>
+</Menu>
+<Menu name="D2" title="寿险结算"	width="50">	
+	<Item name="D21" title="手续费率定义"> 
+		<Item name="D211" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/srate/add.jsp" />	
+		<Item name="D212" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/srate/delete.jsp" /> 	 	
+		<Item name="D213" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/srate/update.jsp" />   
+		<Item name="D214" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/srate/query.jsp" />
+		<Item name="D215" title="复核" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/srate/check.jsp" />
+	</Item>
+	<Item name="D22" title="佣金项目定义"> 
+		<Item name="D221" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/exptype/add.jsp" />	
+		<Item name="D222" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/exptype/delete.jsp" /> 	 	
+		<Item name="D223" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/exptype/update.jsp" />   		 
+	</Item>
+	<Item name="D26" title="佣金率定义"> 
+		<Item name="D261" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/expsrate/add.jsp" />	
+		<Item name="D262" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/expsrate/delete.jsp" /> 	 	
+		<Item name="D263" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/expsrate/update.jsp" />   
+		<Item name="D264" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/expsrate/query.jsp" />
+		<Item name="D265" title="复核" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/expsrate/check.jsp" />
+	</Item>
+	<Item name="D27" title="结算"> 
+		<Item name="D271" title="文件上传"		image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/solve/add.jsp" />	
+		<Item name="D272" title="对账" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/solve/check.jsp" /> 	
+		<Item name="D273" title="结算" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/solve/solve.jsp" /> 			 
+		<Item name="D274" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/solve/query.jsp" />
+	</Item> 
+	<Item name="D28" title="数据查询"> 
+		<Item name="D281" title="手续费查询"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/query/income.jsp" />	
+		<Item name="D282" title="佣金查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/query/expend.jsp" /> 	
+		<Item name="D283" title="代理人银行卡号" 		image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/query/card.jsp" /> 		 
+	</Item> 
+	<Item name="D29" title="数据生成"> 
+		<Item name="D291" title="寿险数据生成"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/lifesolve/data/sxsjjs.jsp" />	 	 	 
+	</Item> 
+</Menu>
+<Menu name="D3" title="产险结算"	width="50">
+	<Item name="D31" title="使用性质定义"> 
+		<Item name="D311" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/usage/add.jsp" />	
+		<Item name="D312" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/usage/delete.jsp" /> 	 	
+		<Item name="D313" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/usage/update.jsp" />   		 
+	</Item>	
+	<Item name="D32" title="手续费率定义"> 
+		<Item name="D321" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/crate/add.jsp" />	
+		<Item name="D322" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/crate/delete.jsp" /> 	 	
+		<Item name="D323" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/crate/update.jsp" />   
+		<Item name="D324" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/crate/query.jsp" /> 
+	</Item> 
+	<Item name="D33" title="收入税率定义"> 
+		<Item name="D331" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/ctax/add.jsp" />	
+		<Item name="D332" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/ctax/delete.jsp" /> 	 	
+		<Item name="D333" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/ctax/update.jsp" />   
+		<Item name="D334" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/ctax/query.jsp" /> 
+	</Item> 
+	<Item name="D34" title="佣金率定义"> 
+		<Item name="D341" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/expcrate/add.jsp" />	
+		<Item name="D342" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/expcrate/delete.jsp" /> 	 	
+		<Item name="D343" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/expcrate/update.jsp" />   
+		<Item name="D344" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/expcrate/query.jsp" /> 
+	</Item> 
+	<Item name="D35" title="支出税率定义"> 
+		<Item name="D351" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/expctax/add.jsp" />	
+		<Item name="D352" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/expctax/delete.jsp" /> 	 	
+		<Item name="D353" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/expctax/update.jsp" />   
+		<Item name="D354" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/expctax/query.jsp" /> 
+	</Item> 
+	<Item name="D36" title="佣金预提"> 
+		<Item name="D361" title="佣金发放"		image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/advance/add.jsp" />	
+		<Item name="D362" title="佣金查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/advance/query.jsp" /> 
+		<Item name="D363" title="佣金删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/advance/delete.jsp" /> 	
+	</Item> 
+	<Item name="D37" title="结算"> 
+		<Item name="D371" title="文件上传"		image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/solve/add.jsp" />	
+		<Item name="D372" title="对账" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/solve/check.jsp" /> 	
+		<Item name="D373" title="结算" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/solve/solve.jsp" /> 			 
+		<Item name="D374" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/solve/query.jsp" />
+	</Item> 
+	<Item name="D38" title="数据查询"> 
+		<Item name="D381" title="手续费查询"			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/query/income.jsp" />	
+		<Item name="D382" title="佣金查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/query/expend.jsp" /> 	
+		<Item name="D383" title="代理人银行卡号" 		image="images/child.gif"
+		location="toModule.do?prefix=/financial@page=/wealthsolve/query/card.jsp" /> 			 
+	</Item> 
+</Menu>
+<Menu name="E2" title="寿险报表"	width="50">	
+	<Item name="E21" title="业务报表"> 
+		<Item name="E211" title="机构业绩表"			image="images/child.gif"
+		location="toModule.do?prefix=/report@page=/lifereport/life/2001-1.jsp" />
+		<Item name="E212" title="供应商业绩表"			image="images/child.gif"
+		location="toModule.do?prefix=/report@page=/lifereport/life/2002-1.jsp" />			
+		<Item name="E213" title="续期收缴进度表"		image="images/child.gif"
+		location="toModule.do?prefix=/report@page=/lifereport/life/2003-1.jsp" /> 
+		<Item name="E214" title="续期继续率表"		image="images/child.gif"
+		location="toModule.do?prefix=/report@page=/lifereport/life/2004-1.jsp" />
+	</Item> 
+</Menu>
+<Menu name="E3" title="产险报表"	width="50">	
+	<Item name="E31" title="业务报表"> 
+		<Item name="E311" title="机构业绩表"			image="images/child.gif"
+		location="toModule.do?prefix=/report@page=/wealthreport/wealth/3001-1.jsp" />
+		<Item name="E312" title="供应商业绩表"			image="images/child.gif"
+		location="toModule.do?prefix=/report@page=/wealthreport/wealth/3002-1.jsp" />			 
+	</Item> 
+</Menu>
+<Menu name="G1" title="录入操作"	width="50">		  
+	<Item 	name="G11" 	title="投保单录入">  		
+		<Item	name="G111"	title="添加"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/sxbd/add.jsp" />
+		<Item 	name="G112" title="复核"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/sxbd/check.jsp" />
+		<Item 	name="G113" title="查询"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/sxbd/query.jsp" />			 
+	</Item> 
+	<Item 	name="G12" 	title="客户管理">  	
+		<!-- 
+		<Item 	name="G121" title="添加"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/customer/add.jsp" />
+		 -->	
+	 	<Item 	name="G122" title="修改"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/customer/update.jsp" />
+		<Item 	name="G123" title="查询"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/customer/query.jsp" /> 
+		<Item 	name="G124" title="统计数据查询"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/customer/tjcx.jsp" /> 		 
+	</Item>
+	<Item 	name="G13" 	title="保单变动">  		
+		<Item 	name="G131" title="生效"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/sx/add.jsp" /> 
+		<Item 	name="G132" title="发放"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/ff/add.jsp" /> 
+		<Item 	name="G133" title="回执"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/hz/add.jsp" /> 
+	</Item> 
+	<Item 	name="G14" 	title="各类清单打印">  				  
+		<Item 	name="G141" title="投保单送达书打印"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/sxbd/sds.jsp" />		
+		<Item 	name="G142" title="投保单日结单打印"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/sxbd/rjd.jsp" />
+		<Item 	name="G143" title="生效日结单打印"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/sx/rjd.jsp" />
+		<Item 	name="G144" title="发放清单打印"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/ff/qd.jsp" />
+		<Item 	name="G145" title="回执送达书打印" 	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/hz/sds.jsp" /> 
+		<Item 	name="G146" title="回执日结单打印"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/hz/rjd.jsp" /> 
+	</Item>	 
+	<Item 	name="G15" 	title="退保">  		
+		<Item	name="G151"	title="添加"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/tb/add.jsp" />  
+	</Item>
+	<Item 	name="G16" 	title="保全修改">				
+	 	<Item 	name="G161" title="保单信息修改"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/update/sxbd.jsp" /> 
+		<Item 	name="G162" title="保单日期修改"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/update/sxbdrq.jsp" />
+		<Item 	name="G163" title="保单状态恢复"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/update/sxbdzt.jsp" />					
+	</Item>   
+	<Item 	name="G17" 	title="数据查询">				
+	 	<Item 	name="G171" title="保单数据查询"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/query/bdcx.jsp" /> 
+		<Item 	name="G172" title="统计数据查询"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/base/query/tjcx.jsp" /> 		 
+	</Item>   
+</Menu>
+<Menu name="G2" title="续期操作"	width="50">	
+	<Item 	name="G21" 	title="催缴查询">  		 
+		<Item 	name="G211" title="查询"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/xuqi/cj/query.jsp" />		 	
+	</Item>
+	<Item 	name="G24" 	title="发票录入">  		
+		<Item	name="G241"	title="添加"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/xuqi/fp/add.jsp" />
+		<Item 	name="G242" title="删除"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/xuqi/fp/delete.jsp" />
+		<Item 	name="G243" title="修改"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/xuqi/fp/update.jsp" />	
+		<Item 	name="G244" title="查询"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/xuqi/fp/query.jsp" />		 	
+		<Item 	name="G245" title="日结单"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/xuqi/fp/rjd.jsp" />	 
+	</Item>
+	<Item 	name="G25" 	title="数据查询">				 
+		<Item 	name="G251" title="收缴进度查询"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/xuqi/query/sjjdcx.jsp" /> 	
+		<Item 	name="G252" title="统计查询"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/xuqi/query/tjcx.jsp" /> 		 
+	</Item>   
+</Menu>
+<Menu name="G3" title="理赔操作"	width="50">	
+	<Item name="G31" title="报案录入">	 
+		<Item	name="G311"	title="添加"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/lp/ba/add.jsp" />
+		<Item 	name="G312" title="删除"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/lp/ba/delete.jsp" />
+		<Item 	name="G313" title="修改"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/lp/ba/update.jsp" />	
+		<Item 	name="G314" title="查询"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/lp/ba/query.jsp" />	 
+	</Item>		
+	<Item name="G32" title="结案录入">	 
+		<Item	name="G321"	title="添加"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/lp/ja/add.jsp" />	 
+		<Item 	name="G322" title="修改"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/lp/ja/update.jsp" />	
+		<Item	name="G323"	title="查询"		image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/lp/ja/query.jsp" />	 		 
+	</Item>	 
+	<Item name="G33" title="数据查询">				 
+		<Item 	name="G331" title="统计查询"	image="images/child.gif" 
+		location="toModule.do?prefix=/life@page=/lp/query/tjcx.jsp" /> 		 
+	</Item>   
+</Menu>
+<Menu name="G5" title="渠道员管理" width="50">	
+	<Item name="G51" title="网点管理">
+		<Item name="G511" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/outlets/add.jsp"/>		 
+		<Item name="G513" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/outlets/update.jsp"/> 	
+		<Item name="G514" title="删除" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/outlets/delete.jsp"/> 		 		 	
+	</Item>  	
+	<Item name="G52" title="关联网点">
+		<Item name="G521" title="设置"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/relate/set.jsp"    />		 
+		<Item name="G522" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/relate/delete.jsp" /> 	 	
+		<Item name="G523" title="查询"	 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/relate/query.jsp" /> 	 	
+	</Item>  	
+	<Item name="G54" title="入司">
+		<Item name="G541" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/entry/add.jsp" />		 
+		<Item name="G542" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/entry/delete.jsp" />
+		<Item name="G543" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/entry/update.jsp" /> 	
+		<Item name="G544" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/entry/query.jsp" /> 	 
+		<Item name="G545" title="修改机构" 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/entry/update-org.jsp" /> 
+		<Item name="G546" title="恢复工号" 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/entry/init.jsp" /> 
+	</Item>  	
+	<Item name="G55" title="血缘关系">
+		<Item name="G551" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/relation/add.jsp"/>		 
+		<Item name="G553" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/relation/update.jsp"/> 	
+		<Item name="G554" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/relation/query.jsp"/> 		 		 	
+	</Item>  	
+	<Item name="G56" title="活动管理">
+		<Item name="G561" title="职级变动"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/active/zjbd.jsp"    />		 
+		<Item name="G562" title="架构查询"	 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/active/map.jsp" /> 	 		 	
+	</Item>  	
+	<Item name="G57" title="佣金发放">
+		<Item name="G571" title="佣金计算"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/salary/add.jsp" />
+		<Item name="G572" title="佣金查询"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/salary/query.jsp" />				 	 		 	
+	</Item>  	
+	<Item name="G58" title="离司">
+		<Item name="G581" title="离司"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/leave/add.jsp" />
+		<Item name="G582" title="离司查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/channel/leave/query.jsp" /> 		 		 	
+	</Item>  
+</Menu>
+<Menu name="G6" title="代理人管理" width="50">	
+	<Item name="G61" title="入司">
+		<Item name="G611" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/entry/add.jsp" />		 
+		<Item name="G612" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/entry/delete.jsp" />
+		<Item name="G613" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/entry/update.jsp" /> 	
+		<Item name="G614" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/entry/query.jsp" /> 
+		<Item name="G615" title="修改机构" 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/entry/update-org.jsp" />	 
+		<Item name="G616" title="恢复工号" 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/entry/init.jsp" /> 
+	</Item>  	
+	<Item name="G62" title="血缘关系">
+		<Item name="G621" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/relation/add.jsp"/>		 
+		<Item name="G623" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/relation/update.jsp"/> 	
+		<Item name="G624" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/relation/query.jsp"/> 		 		 	
+	</Item>  	
+	<Item name="G63" title="活动管理">
+		<Item name="G631" title="职级变动"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/active/zjbd.jsp"    />		 
+		<Item name="G632" title="架构查询"	 		image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/active/map.jsp" /> 	 		 	
+	</Item>  	
+	<Item name="G64" title="佣金发放">
+		<Item name="G641" title="佣金计算"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/commission/add.jsp" />
+		<Item name="G642" title="佣金查询"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/commission/query.jsp" />				 	 		 	
+	</Item>  	
+	<Item name="G65" title="离司">
+		<Item name="G651" title="离司"			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/leave/add.jsp" />
+		<Item name="G652" title="离司查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/life@page=/agent/leave/query.jsp" /> 		 		 	
+	</Item>  	
+</Menu>
+<Menu name="H1" title="有价单证管理" width="50">	 		
+	<Item name="H13" title="入库">
+		<Item name="H131" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/rk/add.jsp" />	
+		<Item name="H132" title="删除"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/rk/delete.jsp"/>		  
+		<Item name="H133" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/rk/query.jsp"/>  	 
+	</Item>  
+	<Item name="H15" title="出库">
+		<Item name="H151" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/ck/add.jsp" />	   
+		<Item name="H152" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/ck/query.jsp"/>  	 
+	</Item>  
+	<Item name="H16" title="回库">
+		<Item name="H161" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/hk/add.jsp" />	 	  
+		<Item name="H162" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/hk/query.jsp"/>   
+	</Item>   
+	<Item name="H17" title="报废">
+		<Item name="H171" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/bf/add.jsp" />	 	  
+		<Item name="H172" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/bf/query.jsp"/>   
+	</Item> 	
+	<Item name="H18" title="相关查询">
+		<Item name="H181" title="库房查询"		image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/shop/record/query/query.jsp"/>		 
+	</Item> 	  
+</Menu>   
+<Menu name="H2" title="录入操作"	width="50">		  
+	<Item 	name="H21" 	title="保单录入">  		
+		<Item	name="H211"	title="添加"		image="images/child.gif" 
+		location="toModule.do?prefix=/wealth@page=/base/cxbd/add.jsp" />
+		<Item 	name="H212" title="复核"		image="images/child.gif" 
+		location="toModule.do?prefix=/wealth@page=/base/cxbd/check.jsp" />
+		<Item 	name="H213" title="查询"		image="images/child.gif" 
+		location="toModule.do?prefix=/wealth@page=/base/cxbd/query.jsp" />			 
+	</Item>  
+	<Item 	name="H23" 	title="保单变动">				
+	 	<Item 	name="H231" title="核销"		image="images/child.gif" 
+		location="toModule.do?prefix=/wealth@page=/base/hx/add.jsp" />  				
+	</Item>  
+	<Item 	name="H24" 	title="各类清单打印">  				  	
+		<Item 	name="H242" title="保单日结单打印"	image="images/child.gif" 
+		location="toModule.do?prefix=/wealth@page=/base/cxbd/rjd.jsp" />		
+	</Item>	  
+	<Item 	name="H25" 	title="保单修改">				
+	 	<Item 	name="H251" title="保单信息修改"		image="images/child.gif" 
+		location="toModule.do?prefix=/wealth@page=/base/update/cxbd.jsp" />  				
+	</Item>  
+	<Item 	name="H27" 	title="数据查询">				 
+		<Item 	name="H272" title="统计数据查询"		image="images/child.gif" 
+		location="toModule.do?prefix=/wealth@page=/base/query/tjcx.jsp" /> 		 
+	</Item>   
+</Menu>
+
+<Menu name="H5" title="代理人管理" width="50">	
+	<!-- 
+	<Item name="H51" title="入司">
+		<Item name="H511" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/entry/add.jsp" />		 
+		<Item name="H512" title="删除"	 		image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/entry/delete.jsp" />
+		<Item name="H513" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/entry/update.jsp" /> 	
+		<Item name="H514" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/entry/query.jsp" /> 
+		<Item name="H515" title="修改机构" 		image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/entry/update-org.jsp" />	 
+		<Item name="H516" title="恢复工号" 		image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/entry/init.jsp" /> 
+	</Item>  	
+	-->
+	<Item name="H52" title="血缘关系">
+		<Item name="H521" title="添加"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/relation/add.jsp"/>		 
+		<Item name="H523" title="修改" 			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/relation/update.jsp"/> 	
+		<Item name="H524" title="查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/relation/query.jsp"/> 		 		 	
+	</Item>  	
+	<Item name="H53" title="活动管理">
+		<Item name="H531" title="职级变动"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/active/zjbd.jsp"    />		 
+		<Item name="H532" title="架构查询"	 		image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/active/map.jsp" /> 	 		 	
+	</Item>   
+	<!-- 
+	<Item name="H54" title="佣金发放">
+		<Item name="H541" title="佣金计算"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/salary/add.jsp" />
+		<Item name="H542" title="佣金查询"			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/salary/query.jsp" />				 	 		 	
+	</Item>  	
+	<Item name="H55" title="离司">
+		<Item name="H551" title="离司"				image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/leave/add.jsp" />
+		<Item name="H552" title="离司查询" 			image="images/child.gif"
+		location="toModule.do?prefix=/wealth@page=/agent/leave/query.jsp" /> 		 		 	
+	</Item>  	
+	 -->
+</Menu>
+
+
+<Menu name="L1" title="计划书管理" width="50">	  
+	<Item name="L11" title="计划书生成"> 
+		<Item name="L111" title="添加"		image="images/child.gif"
+		location="toModule.do?prefix=/plan@page=/book/add/add.jsp" />			 
+	</Item> 	  
+</Menu>
+</Menus>
+</MenuConfig>

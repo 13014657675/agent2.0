@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN" "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+<dwr>
+	<allow>		  	
+		 <convert 	match="org.apache.struts.util.LabelValueBean" 	converter="bean">	     	
+	    	<param 	name="include" 	value="label, value" />
+	     </convert>	 
+	     <convert 	match="com.object.Company" 		converter="bean">	 
+	     </convert>
+	     <convert 	match="com.object.Customer" 	converter="bean">	 
+	     </convert>
+	     <convert 	match="com.object.Staff" 		converter="bean">	     	 
+	     </convert>	      
+	    <create 	creator="new" 	javascript="Organization" >
+			<param 	name="class" 	value="com.object.Organization" />			
+		</create>
+		<create 	creator="new" 	javascript="Company" >
+			<param 	name="class" 	value="com.object.Company" />			
+		</create>		
+		<create 	creator="new" 	javascript="Staff" >
+			<param 	name="class" 	value="com.object.Staff" />			
+		</create>		
+		<create 	creator="new" 	javascript="Product" >
+			<param 	name="class" 	value="com.object.Product" />			
+		</create>
+		<create 	creator="new" 	javascript="Processor" >
+			<param 	name="class" 	value="com.object.Processor" />			
+		</create>		
+		<create 	creator="new" 	javascript="File" >
+			<param 	name="class" 	value="com.object.File" />			
+		</create>
+		<create 	creator="new" 	javascript="Filesigned" >
+			<param 	name="class" 	value="com.object.Filesigned" />			
+		</create>
+		<create 	creator="new" 	javascript="Signed" >
+			<param 	name="class" 	value="com.object.Signed" />			
+		</create>
+		<create 	creator="new" 	javascript="Library" >
+			<param 	name="class" 	value="com.object.Library" />			
+		</create>	 
+		<create 	creator="new" 	javascript="Customer" >
+			<param 	name="class" 	value="com.object.Customer" />			
+		</create>
+		<create 	creator="new" 	javascript="Sxbd" >
+			<param 	name="class" 	value="com.object.Sxbd" />			
+		</create>
+		<create 	creator="new" 	javascript="Cxbd" >
+			<param 	name="class" 	value="com.object.Cxbd" />			
+		</create>
+		<create 	creator="new" 	javascript="Planbook" >
+			<param 	name="class" 	value="com.object.Planbook" />			
+		</create>		
+		<create 	creator="new" 	javascript="Bankoutlets" >
+			<param 	name="class" 	value="com.object.Bankoutlets" />			
+		</create> 
+	</allow>
+</dwr>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+ 	<form-beans >    	  	  
+ 	<form-bean name="lifesolveForm" type="com.financial.form.LifesolveForm" />   
+ 	<form-bean name="wealthsolveForm" type="com.financial.form.WealthsolveForm" />  
+  	</form-beans>
+	<global-exceptions >
+  	<exception key="sql.error" type="java.sql.SQLException"  scope="request" handler="com.publics.ExceptionHander"   path="/error.jsp" />
+  	</global-exceptions>
+  	<global-forwards >
+   	<forward name="success" path="/success.jsp" />
+    <forward name="index" 	path="/index.jsp" /> 
+  	</global-forwards>
+  	<action-mappings >     	 
+     <action  name="lifesolveForm"  path="/lifesolve"  parameter="jobname"   type="com.financial.action.LifesolveAction" />  
+     <action  name="wealthsolveForm"  path="/wealthsolve"  parameter="jobname"   type="com.financial.action.WealthsolveAction" />  
+  	</action-mappings>   
+</struts-config>
+
